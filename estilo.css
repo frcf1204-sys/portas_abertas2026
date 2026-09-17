@@ -158,10 +158,6 @@ header {
     margin-bottom: 15px;
     line-height: 1.6;
 }
-
-/* ==================================================
-   GAVETAS (Details / Summary do Conteúdo - NOVO)
-   ================================================== */
 .custom-details {
     background-color: rgb(49, 55, 82);
     border-radius: 10px;
@@ -213,10 +209,6 @@ header {
         transform: translateY(0);
     }
 }
-
-/* ==================================================
-   CARDS DE JOGOS (NOVO)
-   ================================================== */
 .game-card {
     background-color: rgb(49, 55, 82);
     border-radius: 12px;
