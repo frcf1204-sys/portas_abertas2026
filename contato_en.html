@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact - Influence of Games</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+        <link rel="icon" type="image/png" href="img/control.png"/>
+        <link href="https://fonts.googleapis.com/css2?family=Caacupe+One&family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="nav">
+                <li><a href="index_en.html">Home</a></li>
+                <li><a href="sobre_en.html">About</a></li>
+                <li><a href="bibliografia_en.html">Bibliography</a></li>
+                <li>
+                    <details>
+                        <summary>Credits ▼</summary>
+                        <ul class="dropdown-menu">
+                            <li><a href="creditos_professores_en.html">Instructors</a></li>
+                            <li><a href="creditos_alunos_en.html">Students</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="contato_en.html">Contact</a></li>
+                <li>
+                    <details>
+                        <summary>Languages ▼</summary>
+                        <ul class="dropdown-menu">
+                            <li><a href="contato.html">PT-BR</a></li>
+                            <li><a href="contato_en.html">USA</a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </header>
+
+        <div class="contact-container">
+            <h2>Get in touch</h2>
+            <p class="subtitle">Send your opinion, questions, or comments about our work.</p>
+
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label>Full name (required)</label>
+                    <input type="text" name="nome" placeholder="Enter your full name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Phone (required)</label>
+                    <input type="tel" name="telefone" placeholder="(19) 94002-8922" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email (required)</label>
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Rate our website</label>
+                    <select name="nota">
+                        <option value="" disabled selected>Choose a rating</option>
+                        <option value="10">10 - Excellent</option>
+                        <option value="9">9 - Very Good</option>
+                        <option value="8">8 - Good</option>
+                        <option value="7">7 - Fair</option>
+                        <option value="6">6 - So-so</option>
+                        <option value="5">5 - Average</option>
+                        <option value="4">4 - Kinda Bad</option>
+                        <option value="3">3 - Bad</option>
+                        <option value="2">2 - I could kick the keyboard and do better</option>
+                        <option value="1">1 - God forbid</option>
+                        <option value="0">0 - Just give up</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Comment</label>
+                    <textarea name="comentario" placeholder="Leave your comment here"></textarea>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit">Submit comment</button>
+                    <button type="reset">Clear</button>
+                </div>
+            </form>
+        </div>
+
+        <a href="#" class="btn-voltar-topo">↑</a>
+
+        <div class="footer">
+            <h5>ETEC DE HORTOLÂNDIA 2026 - &copy All rights reserved<br>Non-profit academic work</h5>
+        </div>
+    </body>
+</html>

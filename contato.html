@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Contato - Influência dos Games</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+        <link rel="icon" type="image/png" href="img/control.png"/>
+        <link href="https://fonts.googleapis.com/css2?family=Caacupe+One&family=Plus+Jakarta+Sans:wght@200..800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+            <ul class="nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="bibliografia.html">Bibliografia</a></li>
+                <li>
+                    <details>
+                        <summary>Créditos ▼</summary>
+                        <ul class="dropdown-menu">
+                            <li><a href="creditos_professores.html">Instrutores</a></li>
+                            <li><a href="creditos_alunos.html">Estudantes</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a href="contato.html">Contato</a></li>
+                <li>
+                    <details>
+                        <summary>Idiomas ▼</summary>
+                        <ul class="dropdown-menu">
+                            <li><a href="contato.html">PT-BR</a></li>
+                            <li><a href="contato_en.html">USA</a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </header>
+
+        <div class="contact-container">
+            <h2>Entre em contato</h2>
+            <p class="subtitle">Envie sua opinião, dúvida ou comentário sobre o nosso trabalho.</p>
+
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label>Nome completo (obrigatório)</label>
+                    <input type="text" name="nome" placeholder="Digite seu nome completo" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Telefone (obrigatório)</label>
+                    <input type="tel" name="telefone" placeholder="(19) 94002-8922" required>
+                </div>
+
+                <div class="form-group">
+                    <label>E-mail (obrigatório)</label>
+                    <input type="email" name="email" placeholder="Digite seu e-mail" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Nota para o site</label>
+                    <select name="nota">
+                        <option value="" disabled selected>Escolha uma nota</option>
+                        <option value="10">10 - Excelente</option>
+                        <option value="9">9 - Muito Bom</option>
+                        <option value="8">8 - Bom</option>
+                        <option value="7">7 - Regular</option>
+                        <option value="6">6 - Mais ou menos</option>
+                        <option value="5">5 - Mediano</option>
+                        <option value="4">4 - Meio Ruim</option>
+                        <option value="3">3 - Ruim</option>
+                        <option value="2">2 - Eu chuto o teclado e sai melhor</option>
+                        <option value="1">1 - Cruz credo</option>
+                        <option value="0">0 - Desiste</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Comentário</label>
+                    <textarea name="comentario" placeholder="Deixe aqui seu comentário"></textarea>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit">Enviar comentário</button>
+                    <button type="reset">Limpar</button>
+                </div>
+            </form>
+        </div>
+
+        <a href="#" class="btn-voltar-topo">↑</a>
+
+        <div class="footer">
+            <h5>ETEC DE HORTOLÂNDIA 2026 - &copy Todos os direitos reservados<br>Trabalho acadêmico sem fins lucrativos</h5>
+        </div>
+    </body>
+</html>

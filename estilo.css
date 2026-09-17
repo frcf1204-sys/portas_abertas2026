@@ -1,0 +1,435 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(22, 27, 46);
+    color: rgb(177, 187, 196);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Header e Navegação */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgb(79, 86, 116);
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 100;
+}
+
+#menu-toggle, .menu-icon {
+    display: none;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.nav > li {
+    background-color: rgb(49, 55, 82);
+    border-radius: 20px;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.nav > li:hover {
+    background-color: rgb(32, 35, 49);
+    transform: translateY(-2px);
+}
+
+.nav > li > a,
+.nav summary {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    white-space: nowrap;
+    list-style: none;
+    user-select: none;
+}
+
+.nav summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Dropdown / Cascata */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: rgb(49, 55, 82);
+    border-radius: 15px;
+    list-style: none;
+    min-width: 160px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.nav > li:hover .dropdown-menu,
+.nav details[open] .dropdown-menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 12px 15px;
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.dropdown-menu li a:hover {
+    background-color: rgb(28, 32, 46);
+}
+
+/* Conteúdo Principal */
+.title {
+    margin: 40px 10px;
+    font-size: clamp(1.8rem, 4vw, 3.5rem);
+    color: #ffffff;
+    font-family: "Caacupe One", sans-serif;
+}
+
+.imgPrincipal {
+    max-width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.content-box {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    text-align: left;
+    background-color: rgb(32, 35, 49);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.content-box h1, .content-box h2, .content-box h3, .content-box h4 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.content-box p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.content-box ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* ==================================================
+   GAVETAS (Details / Summary do Conteúdo - NOVO)
+   ================================================== */
+.custom-details {
+    background-color: rgb(49, 55, 82);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgb(72, 79, 105);
+}
+
+.custom-details summary {
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: rgb(72, 79, 105);
+    cursor: pointer;
+    font-weight: bold;
+    list-style: none;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.custom-details summary::-webkit-details-marker {
+    display: none; /* Remove a setinha feia nativa do Chrome */
+}
+
+.custom-details summary:hover {
+    background-color: #3b66f5;
+}
+
+.custom-details[open] summary {
+    background-color: #3b66f5;
+    border-bottom: 1px solid rgb(49, 55, 82);
+}
+
+.details-content {
+    padding: 20px;
+    background-color: rgb(40, 45, 66);
+    /* Transição suave ao abrir (fade In) */
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==================================================
+   CARDS DE JOGOS (NOVO)
+   ================================================== */
+.game-card {
+    background-color: rgb(49, 55, 82);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+.game-card img {
+    max-width: 100%;
+    max-height: 250px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    margin: 15px auto;
+    display: block;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.game-card p {
+    text-align: left;
+    margin-top: 15px;
+}
+
+/* Formulário de Contato */
+.contact-container {
+    background-color: rgb(72, 79, 105);
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.contact-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.contact-container p.subtitle {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.form-buttons button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    font-family: inherit;
+}
+
+.form-buttons button:hover {
+    background-color: white;
+    color: #3b66f5;
+}
+
+/* Botão Voltar ao Topo e Rodapé */
+.btn-voltar-topo {
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+    background-color: #3b66f5;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease;
+    z-index: 90;
+}
+
+.btn-voltar-topo:hover {
+    background-color: white;
+    color: #3b66f5;
+    transform: translateY(-5px);
+}
+
+.footer {
+    margin-top: auto;
+    padding: 20px;
+    background-color: rgb(15, 18, 32);
+    color: #ffffff;
+    width: 100%;
+}
+
+/* Responsividade e Menu Hambúrguer */
+@media (max-width: 768px) {
+    header {
+        justify-content: flex-end;
+        padding: 15px 20px;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 28px;
+        color: white;
+        cursor: pointer;
+        user-select: none;
+        z-index: 1001;
+        position: relative;
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 260px;
+        height: 100vh;
+        background-color: rgb(32, 35, 49);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        padding: 80px 20px 20px 20px;
+        gap: 12px;
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.6);
+        z-index: 1000;
+        overflow-y: auto;
+    }
+
+    #menu-toggle:checked ~ .nav {
+        right: 0;
+    }
+
+    .nav > li {
+        width: 100%;
+    }
+
+    .nav > li:hover {
+        transform: none;
+    }
+
+    .nav > li > a,
+    .nav summary {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        box-shadow: none;
+        display: none;
+        visibility: visible;
+        opacity: 1;
+        width: 100%;
+        background-color: rgb(22, 27, 46);
+        border-radius: 10px;
+        margin-top: 5px;
+    }
+
+    .nav details[open] .dropdown-menu {
+        display: block;
+        transform: none;
+    }
+
+    .imgPrincipal {
+        max-width: 90%;
+    }
+    
+    .content-box {
+        margin: 20px 15px;
+        padding: 20px;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+}
