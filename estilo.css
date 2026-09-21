@@ -19,7 +19,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Header e Navegação */
 header {
     display: flex;
     justify-content: center;
@@ -76,7 +75,6 @@ header {
     display: none;
 }
 
-/* Dropdown / Cascata */
 .dropdown-menu {
     position: absolute;
     top: 100%;
@@ -118,7 +116,6 @@ header {
     background-color: rgb(28, 32, 46);
 }
 
-/* Conteúdo Principal */
 .title {
     margin: 40px 10px;
     font-size: clamp(1.8rem, 4vw, 3.5rem);
@@ -158,6 +155,7 @@ header {
     margin-bottom: 15px;
     line-height: 1.6;
 }
+
 .custom-details {
     background-color: rgb(49, 55, 82);
     border-radius: 10px;
@@ -180,7 +178,7 @@ header {
 }
 
 .custom-details summary::-webkit-details-marker {
-    display: none; /* Remove a setinha feia nativa do Chrome */
+    display: none;
 }
 
 .custom-details summary:hover {
@@ -195,7 +193,6 @@ header {
 .details-content {
     padding: 20px;
     background-color: rgb(40, 45, 66);
-    /* Transição suave ao abrir (fade In) */
     animation: fadeIn 0.4s ease-in-out;
 }
 
@@ -209,6 +206,7 @@ header {
         transform: translateY(0);
     }
 }
+
 .game-card {
     background-color: rgb(49, 55, 82);
     border-radius: 12px;
@@ -239,7 +237,6 @@ header {
     margin-top: 15px;
 }
 
-/* Formulário de Contato */
 .contact-container {
     background-color: rgb(72, 79, 105);
     max-width: 600px;
@@ -273,7 +270,9 @@ header {
     font-size: 0.9rem;
 }
 
-.form-group input, .form-group select, .form-group textarea {
+.form-group input, 
+.form-group select, 
+.form-group textarea {
     width: 100%;
     padding: 12px;
     border: none;
@@ -283,7 +282,7 @@ header {
 
 .form-group textarea {
     height: 120px;
-    resize: vertical;
+    resize: none;
 }
 
 .form-buttons {
@@ -310,7 +309,6 @@ header {
     color: #3b66f5;
 }
 
-/* Botão Voltar ao Topo e Rodapé */
 .btn-voltar-topo {
     position: fixed;
     bottom: 25px;
@@ -341,7 +339,6 @@ header {
     width: 100%;
 }
 
-/* Responsividade e Menu Hambúrguer */
 @media (max-width: 768px) {
     header {
         justify-content: flex-end;
@@ -425,8 +422,3 @@ header {
         flex-direction: column;
     }
 }
-
-textarea {
-    resize: none;
-}
-
